@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="jaja;jaja przepiorcze;jaja strusie" />
+    <meta name="Author" content="Krzysztof Cholewa" />
+    <link rel="stylesheet" href="layout.css">
+    <title>Konie</title>
+</head>
+<body onload="showMainPage()">
+    <header>
+    <p onclick="showMainPage()">Jajka. Kompendium wiedzy o jajach strusich i przepiórczych.</p>
+</header>
+<section>
+<nav>
+    <ul id="nav-menu">
+        <li onclick="menu('jaja-strusie')" class="li">Jaja strusie</li>
+        <li onclick="menu('jaja-przepiorcze')" class="li">Jaja przepiórcze</li>
+        <li onclick="menu('kontakt')" class="li">Kontakt</li>
+    </ul>
+</nav>
+
+<article>
+    <div id="strona-glowna">
+    <h2>Jaja</h2>
+    <p> Jajo - dobre gotowane na twardo lub sadzone</p>
+    <h3>Gotowane na twardo</h3>
+    <p>
+        Jajo wsadzić do garnka z wodą. Wodę posolić, a garnek postawić na palącym się gazie. Czekać 15 minut.
+    </p>
+
+    <h3>Sadzone</h3>
+    <p>Na patelni rozgrzać jakiś olej. Rozbić jajko i wylać zawartość na patelnie. Smażyć według uznania.</p>
+</div>
+
+<div id="jaja-strusie" class="main">
+<div class="art">
+    <h2>Jajo strusie</h2>
+<p> Jajo strusie to kilka zwykłych jaj. Pochodzą one od strusi, a jedno takie jajo potrafi wyżywić pół dorosłego człowieka na cały dzień.</p>
+
+<h3>Strusie</h3>
+
+<p>
+    <img src="./images/strusiejajo.jpg" class="zdjecie">
+    Strusie tak naprawdę nie chowają głowy w piasek.</p>
+
+<h3>Pochodzenie</h3>
+<p>Strusie można spotkać w zoo, ale nie w każdym.</p>
+
+
+</div>
+
+</div>
+
+
+<div id="jaja-przepiorcze" class="main">
+<h2>Jajo przepiórcze</h2>
+<p>Bardzo małe jajo. Mówi się, że jest bardzo zdrowe. Nie wiadomo czy jest tak samo zdrowe jeżeli się go nie ugotuje.</p>
+<h3> Przepiórki.</h3>
+<p>Małe ptaki. Nieloty? hmmmmm</p>
+<h3>Pochodzenie</h3>
+<p> Zamieszkuje niemal całą Europę, Azję Środkową i Południową oraz Afrykę.</p>
+
+<img src="./images/przepiorczejajo.jpg" class="zdj">
+
+</div>
+<div id="kontakt" class="main">
+<h3>Kontakt</h3>
+
+<form action="mailto:someone@example.com" method="post" enctype="text/plain">
+    Imię:<br>
+    <input type="text" name="name"><br>
+    E-mail:<br>
+    <input type="text" name="mail"><br>
+    Komentarz:<br>
+    <input type="text" name="comment" size="150"><br><br>
+    <input type="submit" value="Send">
+    <input type="reset" value="Reset" onclick="">
+    </form>
+</form>
+
+</div>
+</article>
+
+</section>
+<footer>
+    <p id="footer"></p>
+</footer>
+
+
+
+<script>
+    function menu(kon){
+        var main = document.getElementsByClassName("main")
+
+        for(let n of main){
+            n.style.display ="none"
+        }
+
+        var k = document.getElementById(kon)
+        k.style.display="block"
+        document.getElementById("strona-glowna").style.display="none"
+    }
+
+
+    function showMainPage(){
+        document.getElementById("strona-glowna").style.display="block"
+        var main = document.getElementsByClassName("main")
+
+        for(let n of main){
+        n.style.display ="none"
+}
+ }
+
+
+
+        let date = new Date();
+        document.getElementById("footer").innerHTML=date;  
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
